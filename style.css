@@ -1,1 +1,111 @@
 /* Add you CSS here */
+
+/* Set a simple, modern font and background color for the whole page */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #101820; /* dark background for techy vibe */
+  color: #f2f2f2; /* light text for contrast */
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero section styles */
+.hero {
+  text-align: center;
+  padding: 40px 20px 30px 20px;
+  background-color: #1a2233; /* slightly lighter for section contrast */
+}
+
+/* Profile image styles */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* makes the image circular */
+  border: 3px solid #00ffe7; /* techy accent color */
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+/* Main heading in hero */
+.hero h1 {
+  margin: 10px 0 8px 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+/* CTA button styles */
+.cta-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 24px;
+  background-color: #00ffe7;
+  color: #101820;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.cta-btn:hover {
+  background-color: #00bfae;
+}
+
+/* Section headings */
+section h2 {
+  border-left: 4px solid #00ffe7;
+  padding-left: 10px;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-size: 1.5em;
+}
+
+/* About, Skills, Projects sections */
+.about, .skills, .projects {
+  max-width: 600px;
+  margin: 0 auto 32px auto;
+  padding: 0 20px;
+}
+
+/* Skills list styles */
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+.skills li {
+  background: #232b3a;
+  display: inline-block;
+  margin: 6px 8px 6px 0;
+  padding: 8px 16px;
+  border-radius: 16px;
+  color: #00ffe7;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* Projects list styles */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.project-item {
+  background: #232b3a;
+  padding: 16px;
+  border-radius: 10px;
+  border-left: 4px solid #00ffe7;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 24px 10px 16px 10px;
+  background-color: #1a2233;
+  margin-top: 40px;
+  font-size: 1em;
+}
+.footer a {
+  color: #00ffe7;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
