@@ -3,19 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>My Personal Site</title>
+  <!-- Add Google Fonts for a modern vibe -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/daeb4d407f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Navbar at the top -->
+  <nav class="navbar">
+    <!-- Navigation links now go to each section using IDs -->
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="hero">
-    <!-- Profile image (replace src with your own image) -->
-    <img src="img/me.png" alt="Profile Photo" class="profile-img">
+  <section class="hero" id="hero">
+    <!-- Profile image -->
+    <img src="img/me.jpg" alt="Profile Photo" class="profile-img">
     <!-- Main heading -->
-    <h1>Hello, I'm [Your Name]</h1>
+    <h1>Hello, I'm Rian!</h1>
     <!-- Short description -->
     <p>Aspiring Web Developer</p>
-    <!-- Call to Action button -->
-    <a href="#projects" class="cta-btn">View My Projects</a>
   </section>
 
   <!-- About Me Section -->
@@ -30,11 +43,38 @@
   <!-- Skills/Technologies Section -->
   <section class="skills" id="skills">
     <h2>Skills & Technologies</h2>
-    <ul>
-      <!-- List your skills here -->
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript (learning)</li>
+    <!-- We use a simple list for skills. Each skill has its icon above the name. -->
+    <ul class="skills-list">
+      <!-- Skill: HTML -->
+      <li>
+        <!-- Large HTML icon above the skill name -->
+        <i class="fa-brands fa-html5"></i>
+        <div>HTML</div>
+      </li>
+      <!-- Skill: CSS -->
+      <li>
+        <!-- Large CSS icon above the skill name -->
+        <i class="fa-brands fa-css3-alt"></i>
+        <div>CSS</div>
+      </li>
+      <!-- Skill: JavaScript -->
+      <li>
+        <!-- Large JavaScript icon above the skill name -->
+        <i class="fa-brands fa-js"></i>
+        <div>JavaScript</div>
+      </li>
+      <!-- Skill: Python -->
+      <li>
+        <!-- Large Python icon above the skill name -->
+        <i class="fa-brands fa-python"></i>
+        <div>Python</div>
+      </li>
+      <!-- Skill: Java -->
+      <li>
+        <!-- Large Java icon above the skill name -->
+        <i class="fa-brands fa-java"></i>
+        <div>Java</div>
+      </li>
     </ul>
   </section>
 
@@ -54,8 +94,8 @@
   <!-- Contact/Footer Section -->
   <footer class="footer" id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>&copy; 2024 [Your Name]</p>
+    <p>Email: <a href="mailto:your.email@example.com">ralewi12@louisville.edu</a></p>
+    <p>&copy; 2024 Rian Lewis</p>
   </footer>
 </body>
 </html>

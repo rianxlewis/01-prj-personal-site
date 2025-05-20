@@ -2,7 +2,8 @@
 
 /* Set a simple, modern font and background color for the whole page */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  /* Use Google Font 'Roboto' for a modern, techy vibe */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   background-color: #101820; /* dark background for techy vibe */
   color: #f2f2f2; /* light text for contrast */
   margin: 0;
@@ -18,12 +19,15 @@ body {
 
 /* Profile image styles */
 .profile-img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%; /* makes the image circular */
-  border: 3px solid #00ffe7; /* techy accent color */
   margin-bottom: 16px;
   object-fit: cover;
+  /* Add a soft shadow to blend with the background */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  /* Remove the bright border for a more subtle look */
+  /* border: 3px solid #00ffe7; */
 }
 
 /* Main heading in hero */
@@ -67,7 +71,6 @@ section h2 {
 
 /* Skills list styles */
 .skills ul {
-  list-style: none;
   padding: 0;
 }
 .skills li {
@@ -79,6 +82,16 @@ section h2 {
   color: #00ffe7;
   font-weight: bold;
   font-size: 1em;
+}
+
+/* Skill icon styles */
+.skill-icon {
+  display: block;
+  margin: 0 auto 6px auto; /* center icon and add space below */
+  width: 32px; /* small icon size */
+  height: 32px;
+  border-radius: 8px; /* slightly rounded corners */
+  object-fit: cover;
 }
 
 /* Projects list styles */
@@ -108,4 +121,65 @@ section h2 {
 }
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #101820; /* darker background for better contrast */
+  padding: 12px 0;
+  text-align: center;
+  position: sticky; /* keeps navbar at the top when scrolling */
+  top: 0;
+  z-index: 100;
+  /* Add a subtle box shadow for separation */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Navbar links */
+.navbar a {
+  color: #00ffe7; /* bright accent color for visibility */
+  text-decoration: none;
+  margin: 0 16px;
+  font-weight: bold;
+  font-size: 1.1em; /* slightly larger for readability */
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+
+/* Skills section list styles (moved from inline HTML) */
+.skills-list {
+  list-style: none;         /* Remove default bullets */
+  padding: 0;               /* Remove default padding */
+  display: flex;            /* Display items in a row */
+  gap: 40px;                /* Space between items */
+  justify-content: center;  /* Center the list horizontally */
+}
+
+.skills-list li {
+  text-align: center;       /* Center text and icon */
+}
+
+/* Make skill icons large and colored */
+.skills-list i.fa-html5 {
+  font-size: 48px;
+  color: #e34c26;
+}
+.skills-list i.fa-css3-alt {
+  font-size: 48px;
+  color: #2965f1;
+}
+.skills-list i.fa-js {
+  font-size: 48px;
+  color: #f7df1e;
+}
+.skills-list i.fa-python {
+  font-size: 48px;
+  color: #3776ab;
+}
+.skills-list i.fa-java {
+  font-size: 48px;
+  color: #007396;
 }
