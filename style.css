@@ -1,75 +1,110 @@
-/* Add you CSS here */
+html {
+  scroll-behavior: smooth;
+}
 
-/* Set a simple, modern font and background color for the whole page */
 body {
-  /* Use Google Font 'Roboto' for a modern, techy vibe */
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  background-color: #101820; /* dark background for techy vibe */
-  color: #f2f2f2; /* light text for contrast */
+  background-color: #101820;
+  color: #f2f2f2;
   margin: 0;
   padding: 0;
 }
 
-/* Hero section styles */
+.navbar {
+  background-color: rgba(16, 24, 32, 0.95);
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(0, 255, 229, 0.1);
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #00ffe5;
+  background-color: rgba(0, 255, 229, 0.1);
+  transform: translateY(-2px);
+}
+
 .hero {
   text-align: center;
-  padding: 40px 20px 30px 20px;
-  background-color: #1a2233; /* slightly lighter for section contrast */
+  padding: 100px 20px 80px 20px;
+  background: linear-gradient(135deg, #1a2233 0%, #101820 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Profile image styles */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(0, 255, 229, 0.05) 2px, transparent 2px);
+  background-size: 30px 30px;
+  z-index: 0;
+}
+
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
 .profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%; /* makes the image circular */
-  margin-bottom: 16px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 25px;
   object-fit: cover;
-  /* Add a soft shadow to blend with the background */
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-  /* Remove the bright border for a more subtle look */
-  /* border: 3px solid #00ffe7; */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 0 8px rgba(0, 255, 229, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Main heading in hero */
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 0 8px rgba(0, 255, 229, 0.3);
+}
+
 .hero h1 {
-  margin: 10px 0 8px 0;
-  font-size: 2em;
+  margin: 10px 0 15px 0;
+  font-size: 3em;
   letter-spacing: 1px;
+  font-weight: 800;
+  background: linear-gradient(to right, #ffffff, #00ffe5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* CTA button styles */
-.cta-btn {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 10px 24px;
-  background-color: #00ffe7;
-  color: #101820;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background 0.2s;
-}
-.cta-btn:hover {
-  background-color: #00bfae;
+.hero p {
+  margin: 0;
+  font-size: 1.4em;
+  color: rgba(242, 242, 242, 0.8);
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
-/* Section headings */
-section h2 {
-  border-left: 4px solid #00ffe7;
-  padding-left: 10px;
-  margin-top: 32px;
-  margin-bottom: 12px;
-  font-size: 1.5em;
-}
-
-/* About, Skills, Projects sections */
 .about, .skills, .projects {
   max-width: 600px;
   margin: 0 auto 32px auto;
   padding: 0 20px;
 }
 
-/* Skills list styles */
 .skills ul {
   padding: 0;
 }
@@ -84,85 +119,33 @@ section h2 {
   font-size: 1em;
 }
 
-/* Skill icon styles */
 .skill-icon {
   display: block;
-  margin: 0 auto 6px auto; /* center icon and add space below */
-  width: 32px; /* small icon size */
+  margin: 0 auto 6px auto;
+  width: 32px;
   height: 32px;
-  border-radius: 8px; /* slightly rounded corners */
+  border-radius: 8px;
   object-fit: cover;
 }
 
-/* Projects list styles */
-.project-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.project-item {
-  background: #232b3a;
-  padding: 16px;
-  border-radius: 10px;
-  border-left: 4px solid #00ffe7;
-}
-
-/* Footer styles */
-.footer {
-  text-align: center;
-  padding: 24px 10px 16px 10px;
-  background-color: #1a2233;
-  margin-top: 40px;
-  font-size: 1em;
-}
-.footer a {
-  color: #00ffe7;
-  text-decoration: none;
-}
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* Navbar styles */
-.navbar {
-  background-color: #101820; /* darker background for better contrast */
-  padding: 12px 0;
-  text-align: center;
-  position: sticky; /* keeps navbar at the top when scrolling */
-  top: 0;
-  z-index: 100;
-  /* Add a subtle box shadow for separation */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-/* Navbar links */
-.navbar a {
-  color: #00ffe7; /* bright accent color for visibility */
-  text-decoration: none;
-  margin: 0 16px;
-  font-weight: bold;
-  font-size: 1.1em; /* slightly larger for readability */
-  transition: color 0.2s;
-}
-
-.navbar a:hover {
-  color: #ffffff;
-}
-
-/* Skills section list styles (moved from inline HTML) */
 .skills-list {
-  list-style: none;         /* Remove default bullets */
-  padding: 0;               /* Remove default padding */
-  display: flex;            /* Display items in a row */
-  gap: 40px;                /* Space between items */
-  justify-content: center;  /* Center the list horizontally */
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
 }
 
 .skills-list li {
-  text-align: center;       /* Center text and icon */
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Make skill icons large and colored */
+.skills-list li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0,255,229,0.15);
+}
+
 .skills-list i.fa-html5 {
   font-size: 48px;
   color: #e34c26;
@@ -182,4 +165,97 @@ section h2 {
 .skills-list i.fa-java {
   font-size: 48px;
   color: #007396;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.project-item {
+  background: #232b3a;
+  padding: 16px;
+  border-radius: 10px;
+  border-left: 4px solid #00ffe7;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 20px 30px 20px;
+  background-color: #1a2233;
+  margin-top: 60px;
+  position: relative;
+}
+
+.footer::before {
+  content: none;
+}
+
+.footer * {
+  position: relative;
+  z-index: 1;
+}
+
+.footer h2 {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: rgba(242, 242, 242, 0.8);
+}
+
+.footer a {
+  color: #00ffe7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.social-links {
+  margin: 25px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #00ffe7;
+  font-size: 1.8em;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 255, 229, 0.05);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 255, 229, 0.1);
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+  background-color: rgba(0, 255, 229, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 255, 229, 0.2);
+}
+
+section h2 {
+  border-left: 4px solid #00ffe7;
+  padding-left: 10px;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-size: 1.5em;
 }
